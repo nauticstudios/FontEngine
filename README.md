@@ -15,7 +15,6 @@
 - Rainbow color support
 - Vanilla color codes (`&c`, `&a`, etc.)
 - Hex color support (`#ff0000`)
-- Bracket `{}` placeholder support
 - Short aliases for all modes
 
 ---
@@ -66,10 +65,8 @@
 | 5 | Superscript |
 | 6 | Subscript |
 
----
 
 ## Color Systems
-
 | Type | Alias | Example |
 |------|-------|--------|
 | Gradient | `g` | `g[#ff0000:#00ff00]` |
@@ -79,42 +76,30 @@
 | Hex | `n` | `n[#ff0000]` |
 
 ---
-
-## Examples
-
+# Examples
 ### Text Mode (letters only)
 
-`%fontengine_text/1/g[#ff0000:#00ff00]=(Hello {player_name})%`
-
----
+`%fontengine_text/1/g[#ff0000:#00ff00]=(Hi {player_name})%`
 
 ### Number Mode (digits only)
 
-`%fontengine_number/2/s[#00ffff]=({player_ping})%`
-
----
+`%fontengine_number/4/s[#00ffff]=({player_ping})%`
 
 ### Combined Mode (letters + numbers) Gradient
 
-`%fontengine_cd<t:1/n:2/g>[#ff0000:#00ff00]=({player_uuid})%`
-
----
+`%fontengine_cd<t:3/n:2/g[#ff0000:#00ff00]>=({player_uuid})%`
 
 ### Combined Mode Rainbow
 
-`%fontengine_cd<t:1/n:2/r>=({player_uuid})%`
-
----
+`%fontengine_cd<t:1/n:2/r:255>=({player_uuid})%`
 
 ### Combined Mode Vanilla Color
 
-`%fontengine_cd<t:1/n:2/n:&c>=({player_uuid})%`
-
----
+### `%fontengine_cd<t:2/n:4/n:&c>=({player_uuid})%`
 
 ### Combined Mode Hex Color
 
-`%fontengine_cd<t:1/n:2/n:#ff0000>=({player_uuid})%`
+`%fontengine_cd<t:1/n:3/n:#ff0000>=({player_uuid})%`
 
 ---
 
