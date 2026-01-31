@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.nautic</groupId>
+    <artifactId>FontEngine</artifactId>
+    <version>0.1.1</version>
+    <packaging>jar</packaging>
+
+    <name>FontEngine</name>
+    <url>https://github.com/senkex/FontEngine</url>
+
+    <organization>
+        <name>Nautic Studios</name>
+        <url>https://www.nautic-studios.com</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>senkex</id>
+            <email>senkex@nautic-studios.com</email>
+            <url>https://senkex.blog</url>
+            <organization>Nautic Studios</organization>
+            <organizationUrl>https://www.nautic-studios.com</organizationUrl>
+            <timezone>Argentina/Buenos Aires</timezone>
+            <roles>
+                <role>ceo</role>
+                <role>head-developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <properties>
+        <java.version>21</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <defaultGoal>clean package</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>spigotmc-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/releases</url>
+        </repository>
+        <repository>
+            <id>iridiumdevelopment</id>
+            <url>https://nexus.iridiumdevelopment.net/repository/maven-releases/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.21.10-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.11.7</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.iridium</groupId>
+            <artifactId>IridiumColorAPI</artifactId>
+            <version>1.0.9</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>
