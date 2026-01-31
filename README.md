@@ -95,7 +95,7 @@
 
 ### Combined Mode Vanilla Color
 
-### `%fontengine_cd<t:2/n:4/n:&c>=({player_uuid})%`
+`%fontengine_cd<t:2/n:4/n:&c>=({player_uuid})%`
 
 ### Combined Mode Hex Color
 
