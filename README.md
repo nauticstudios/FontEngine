@@ -1,7 +1,7 @@
 # <center>FontEngine</center>
 
 ---
-**FontEngine** is a professional PlaceholderAPI expansion for Minecraft servers that allows advanced text formatting with **custom text fonts, number fonts, combined letters + numbers, and multiple color modes** including gradients, solid colors, rainbow effects, and vanilla color codes. It supports `{placeholders}`
+**FontEngine** is a professional PlaceholderAPI expansion for Minecraft servers that allows advanced text formatting with **custom text fonts, number fonts, combined letters + numbers, and multiple color modes** including gradients, solid colors, rainbow effects, and vanilla color codes.
 
 ---
 
@@ -15,7 +15,7 @@
 - Rainbow color support
 - Vanilla color codes (`&c`, `&a`, etc.)
 - Hex color support (`#ff0000`)
-- Bracket `{}` and classic `%` placeholder support
+- Bracket `{}` placeholder support
 - Short aliases for all modes
 
 ---
@@ -122,11 +122,7 @@
 
 FontEngine fully supports:
 
-- `{player_name}`, `{player_uuid}`, `{player_ping}`, `{player_health}`, etc.
-
-Example:
-
-Hello {player_name}, your ping is {player_ping}.
+- `{player_name}`, `{server_version}`, etc.
 
 
 All placeholders are resolved before applying fonts and colors.
